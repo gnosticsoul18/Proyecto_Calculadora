@@ -3,8 +3,9 @@ using System.Web.UI.WebControls;
 
 namespace Proyecto_Calculadora
 {
-    public partial class CalculadoraWebForm : System.Web.UI.Page
+    public partial class CalculadoraWebForm : System.Web.UI.Page //Heredar o tener acceso a la clase hereda de la clase System.Web.UI.Page. para funcionalidades de asp.net
     {
+       // estas clases usan ViewState para mantener los valores en cada solicitud y no perder los valores de numero1 y operador
         protected double numero1
         {
             get
@@ -111,7 +112,8 @@ namespace Proyecto_Calculadora
                         break;
                     case "x^y":
                         resultado = Math.Pow(numero1, numero2); // Potencia de numero1 a la potencia de numero2
-                        numero1 = resultado; 
+                        numero1 = resultado;
+                        operador = null;
                         break;
                     case "10^x":
                         resultado = Math.Pow(10, numero1); // Notación científica (10 elevado a la potencia de numero1)
@@ -178,6 +180,14 @@ namespace Proyecto_Calculadora
                 double numero = Convert.ToDouble(Tresultado.Text);
                 numero = -numero; // Cambiar el signo del número
                 Tresultado.Text = numero.ToString();
+            }
+        }
+
+        protected void Bborrar_Click(object sender, EventArgs e)
+        {
+            if (Tresultado.Text.Length > 0)
+            {
+                Tresultado.Text = Tresultado.Text.Substring(0, Tresultado.Text.Length - 1);
             }
         }
     }

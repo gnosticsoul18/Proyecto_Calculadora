@@ -53,6 +53,9 @@
             color: #FFFFFF;
             background-color: #000066;
         }
+        .auto-style28 {
+            background-color: #99CCFF;
+        }
     </style>
 </head>
 <body style="height: 460px; width: 470px">
@@ -63,18 +66,18 @@
             </tr>
             <tr>
                 <td class="auto-style5" colspan="5">
-                    <asp:TextBox ID="Tresultado" runat="server" Font-Bold="True" Font-Size="XX-Large" Height="64px" ReadOnly="True" TextMode="MultiLine" Width="427px" MaxLength="20">0</asp:TextBox>
+                    <asp:TextBox ID="Tresultado" runat="server" Font-Bold="True" Font-Size="XX-Large" Height="64px" ReadOnly="True" TextMode="MultiLine" Width="427px" MaxLength="20" CssClass="auto-style28">0</asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style23"><strong>
-                    <asp:Button ID="Braiz" runat="server" CssClass="auto-style26" Height="51px" Text="&radic;" Width="85px" OnClick="Braiz_Click" />
+                    <asp:Button ID="Braiz" runat="server" CssClass="auto-style26" Height="51px" Text="√" Width="85px" OnClick="BoperadorClick"/>
                     </strong></td>
                 <td class="auto-style18"><strong>
                     <asp:Button ID="Bclear" runat="server" CssClass="auto-style26" Height="51px" Text="c" Width="85px" OnClick="Bclear_Click" />
                     </strong></td>
                 <td class="auto-style18"><strong>
-                    <asp:Button ID="Bborrar" runat="server" CssClass="auto-style26" Height="51px" Text="&#213;" Width="85px" Font-Names="Wingdings" />
+                    <asp:Button ID="Bborrar" runat="server" CssClass="auto-style26" Height="51px" Text="&#213;" Width="85px" Font-Names="Wingdings" OnClick="Bborrar_Click" />
                     </strong></td>
                 <td class="auto-style18"><strong>
                     <asp:Button ID="Bfactorial" runat="server" CssClass="auto-style26" Height="51px" Text="n!" Width="85px" Font-Italic="True" OnClick="BoperadorClick" />
