@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -66,7 +67,7 @@
             </tr>
             <tr>
                 <td class="auto-style5" colspan="5">
-                    <asp:TextBox ID="Tresultado" runat="server" Font-Bold="True" Font-Size="XX-Large" Height="64px" ReadOnly="True" TextMode="MultiLine" Width="427px" MaxLength="20" CssClass="auto-style28">0</asp:TextBox>
+                    <asp:TextBox ID="Tresultado" runat="server" Font-Bold="True" Font-Size="XX-Large" Height="64px" ReadOnly="True" TextMode="MultiLine" Width="427px" MaxLength="20" TextAlign = "Right" CssClass="auto-style28">0</asp:TextBox>
                 </td>
             </tr>
             <tr>
